@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agente IA - Sakila</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="chat-container">
+    <header>
+      <h1>Agente IA · Sakila</h1>
+      <p>Consulta películas, clientes e ingresos de la tienda.</p>
+    </header>
+    <section id="chatBox" class="chat-box" aria-live="polite">
+      <div class="message assistant">¡Hola! Puedo analizar la base Sakila. Prueba una de las tres preguntas de la actividad.</div>
+    </section>
+    <div class="suggestions">
+      <button type="button" data-question="Recomiéndame 3 películas de acción de más de 2 horas que se alquilen más seguido.">Películas más alquiladas</button>
+      <button type="button" data-question="¿Qué clientes llevan mucho tiempo sin alquilar ninguna película?">Clientes inactivos</button>
+      <button type="button" data-question="¿Qué día de la semana hay más movimiento y cuánto dinero promedio se recauda?">Movimiento e ingresos</button>
+    </div>
+    <form id="chatForm" class="input-area">
+      <input id="userInput" type="text" placeholder="Escribe tu pregunta..." autocomplete="off" required>
+      <button type="submit">Enviar</button>
+    </form>
+    <p class="footnote">El análisis requiere que el backend esté conectado a MySQL/Sakila.</p>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
